@@ -5,24 +5,10 @@
         <div class="page-content">
           <div class="container" :class="{ 'shift-left': shouldShift }">
             <div class="header">
-              <button
-                id="themeToggle"
-                :aria-label="t('SWITCH_THEME')"
-                @click="handleToggleTheme"
-              >
-                <svg
-                  id="themeIcon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="transparent"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-sun"
-                >
+              <button id="themeToggle" :aria-label="t('SWITCH_THEME')" @click="handleToggleTheme">
+                <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="transparent" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-sun">
                   <circle cx="12" cy="12" r="4"></circle>
                   <path d="M12 2v2"></path>
                   <path d="M12 20v2"></path>
@@ -36,70 +22,33 @@
               </button>
 
               <div class="right-icons" @click="showLanguageMenu = false">
-                <div
-                  class="language-container"
-                  @click.stop="toggleLanguageMenu"
-                >
-                  <button
-                    :aria-label="t('SWITCH_LANGUAGE')"
-                    class="language-btn"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                <div class="language-container" @click.stop="toggleLanguageMenu">
+                  <button :aria-label="t('SWITCH_LANGUAGE')" class="language-btn">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M7.49996 1.80002C4.35194 1.80002 1.79996 4.352 1.79996 7.50002C1.79996 10.648 4.35194 13.2 7.49996 13.2C10.648 13.2 13.2 10.648 13.2 7.50002C13.2 4.352 10.648 1.80002 7.49996 1.80002ZM0.899963 7.50002C0.899963 3.85494 3.85488 0.900024 7.49996 0.900024C11.145 0.900024 14.1 3.85494 14.1 7.50002C14.1 11.1451 11.145 14.1 7.49996 14.1C3.85488 14.1 0.899963 11.1451 0.899963 7.50002Z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                      ></path>
-                      <path
-                        d="M13.4999 7.89998H1.49994V7.09998H13.4999V7.89998Z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                      ></path>
+                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                      <path d="M13.4999 7.89998H1.49994V7.09998H13.4999V7.89998Z" fill="currentColor"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
                       <path
                         d="M7.09991 13.5V1.5H7.89991V13.5H7.09991zM10.375 7.49998C10.375 5.32724 9.59364 3.17778 8.06183 1.75656L8.53793 1.24341C10.2396 2.82218 11.075 5.17273 11.075 7.49998 11.075 9.82724 10.2396 12.1778 8.53793 13.7566L8.06183 13.2434C9.59364 11.8222 10.375 9.67273 10.375 7.49998zM3.99969 7.5C3.99969 5.17611 4.80786 2.82678 6.45768 1.24719L6.94177 1.75281C5.4582 3.17323 4.69969 5.32389 4.69969 7.5 4.6997 9.67611 5.45822 11.8268 6.94179 13.2472L6.45769 13.7528C4.80788 12.1732 3.9997 9.8239 3.99969 7.5z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                      ></path>
+                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                       <path
                         d="M7.49996 3.95801C9.66928 3.95801 11.8753 4.35915 13.3706 5.19448 13.5394 5.28875 13.5998 5.50197 13.5055 5.67073 13.4113 5.83948 13.198 5.89987 13.0293 5.8056 11.6794 5.05155 9.60799 4.65801 7.49996 4.65801 5.39192 4.65801 3.32052 5.05155 1.97064 5.8056 1.80188 5.89987 1.58866 5.83948 1.49439 5.67073 1.40013 5.50197 1.46051 5.28875 1.62927 5.19448 3.12466 4.35915 5.33063 3.95801 7.49996 3.95801zM7.49996 10.85C9.66928 10.85 11.8753 10.4488 13.3706 9.6135 13.5394 9.51924 13.5998 9.30601 13.5055 9.13726 13.4113 8.9685 13.198 8.90812 13.0293 9.00238 11.6794 9.75643 9.60799 10.15 7.49996 10.15 5.39192 10.15 3.32052 9.75643 1.97064 9.00239 1.80188 8.90812 1.58866 8.9685 1.49439 9.13726 1.40013 9.30601 1.46051 9.51924 1.62927 9.6135 3.12466 10.4488 5.33063 10.85 7.49996 10.85z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                      ></path>
+                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                   </button>
                   <div v-if="showLanguageMenu" class="language-menu">
-                    <button
-                      class="language-menu-button"
-                      @click="setLanguage('zh')"
-                    >
+                    <button class="language-menu-button" @click="setLanguage('zh')">
                       {{ t('LANGUAGE_CHINESE') }}
                     </button>
-                    <button
-                      class="language-menu-button"
-                      @click="setLanguage('en')"
-                    >
+                    <button class="language-menu-button" @click="setLanguage('en')">
                       {{ t('LANGUAGE_ENGLISH') }}
                     </button>
                   </div>
                 </div>
-                <a-tooltip
-                  :title="t('EXPERIMENTAL_FEATURES')"
-                  placement="bottom"
-                >
-                  <a
-                    @click="showExperimentalFeatures = true"
-                    class="icon-button"
-                  >
+                <a-tooltip :title="t('EXPERIMENTAL_FEATURES')" placement="bottom">
+                  <a @click="showExperimentalFeatures = true" class="icon-button">
                     <ExperimentOutlined style="cursor: pointer" />
                   </a>
                 </a-tooltip>
@@ -121,59 +70,29 @@
 
             <form @submit.prevent="handleSubmit" id="apiForm">
               <div style="position: relative">
-                <textarea
-                  v-model="apiInfo"
-                  id="api_info"
-                  name="api_info"
-                  :placeholder="t('API_INFO_PLACEHOLDER')"
-                ></textarea>
-                <a-button
-                  type="primary"
-                  size="small"
-                  @click="handlePaste"
-                  style="
+                <textarea v-model="apiInfo" id="api_info" name="api_info"
+                  :placeholder="t('API_INFO_PLACEHOLDER')"></textarea>
+                <a-button type="primary" size="small" @click="handlePaste" style="
                     position: absolute;
                     right: 4px;
                     top: 14px;
                     height: 24px;
-                  "
-                >
+                  ">
                   <template #icon>
                     <CopyOutlined style="font-size: 14px" />
                   </template>
                 </a-button>
               </div>
 
-              <input
-                type="text"
-                v-model="apiUrl"
-                id="api_url"
-                name="api_url"
-                :placeholder="t('API_URL_PLACEHOLDER')"
-              />
+              <input type="text" v-model="apiUrl" id="api_url" name="api_url" :placeholder="t('API_URL_PLACEHOLDER')" />
 
-              <input
-                type="text"
-                v-model="apiKey"
-                id="api_key"
-                name="api_key"
-                :placeholder="t('API_KEY_PLACEHOLDER')"
-              />
+              <input type="text" v-model="apiKey" id="api_key" name="api_key" :placeholder="t('API_KEY_PLACEHOLDER')" />
 
               <div class="model-input-container" id="model-input-container">
-                <textarea
-                  v-model="modelName"
-                  id="model_name"
-                  name="model_name"
-                  :placeholder="t('MODEL_NAME_PLACEHOLDER')"
-                ></textarea>
-                <a-button
-                  type="primary"
-                  :loading="spinning"
-                  @click="getModelList"
-                  class="get-models large-button"
-                  style="height: 80px; width: 180px"
-                >
+                <textarea v-model="modelName" id="model_name" name="model_name"
+                  :placeholder="t('MODEL_NAME_PLACEHOLDER')"></textarea>
+                <a-button type="primary" :loading="spinning" @click="getModelList" class="get-models large-button"
+                  style="height: 80px; width: 180px">
                   {{ t('GET_MODEL_LIST') }}
                 </a-button>
               </div>
@@ -182,67 +101,34 @@
               <div class="model-timeout-concurrency">
                 <div class="model-timeout">
                   <label for="model_timeout">{{ t('SET_TIMEOUT') }}:</label>
-                  <input
-                    type="number"
-                    v-model="modelTimeout"
-                    id="model_timeout"
-                    name="model_timeout"
-                    min="1"
-                    :placeholder="t('TIMEOUT_PLACEHOLDER')"
-                  />
+                  <input type="number" v-model="modelTimeout" id="model_timeout" name="model_timeout" min="1"
+                    :placeholder="t('TIMEOUT_PLACEHOLDER')" />
                 </div>
                 <div class="model-concurrency">
-                  <label for="model_concurrency"
-                    >{{ t('SET_CONCURRENCY') }}:</label
-                  >
-                  <input
-                    type="number"
-                    v-model="modelConcurrency"
-                    id="model_concurrency"
-                    name="model_concurrency"
-                    min="1"
-                    :placeholder="t('CONCURRENCY_PLACEHOLDER')"
-                  />
+                  <label for="model_concurrency">{{ t('SET_CONCURRENCY') }}:</label>
+                  <input type="number" v-model="modelConcurrency" id="model_concurrency" name="model_concurrency"
+                    min="1" :placeholder="t('CONCURRENCY_PLACEHOLDER')" />
                 </div>
               </div>
 
               <div class="submit-container">
-                <a-button
-                  type="primary"
-                  :loading="testModels_spinning"
-                  @click="testModels"
-                  class="submit-query"
-                  size="large"
-                >
+                <a-button type="primary" :loading="testModels_spinning" @click="testModels" class="submit-query"
+                  size="large">
                   {{ t('TEST_MODELS') }}
                 </a-button>
 
-                <a-button
-                  type="default"
-                  :loading="checkQuota_spinning"
-                  @click="checkQuota"
-                  class="check-quota"
-                  size="large"
-                >
+                <a-button type="default" :loading="checkQuota_spinning" @click="checkQuota" class="check-quota"
+                  size="large">
                   {{ t('CHECK_QUOTA') }}
                 </a-button>
 
-                <a-button
-                  type="ghost"
-                  @click="clearForm"
-                  class="clear-form"
-                  size="large"
-                >
+                <a-button type="ghost" @click="clearForm" class="clear-form" size="large">
                   {{ t('CLEAR_FORM') }}
                 </a-button>
               </div>
             </form>
           </div>
-          <div
-            class="container result-container"
-            v-if="showResultContainer"
-            :class="{ show: showResultContainer }"
-          >
+          <div class="container result-container" v-if="showResultContainer" :class="{ show: showResultContainer }">
             <button class="close-button" @click="closeResults">×</button>
             <div class="result-content" style="position: relative">
               <div v-if="verificationLoading" class="loading-overlay">
@@ -250,26 +136,14 @@
               </div>
 
               <div class="left-icons">
-                <a-tooltip
-                  :title="t('CHAT')"
-                  placement="bottom"
-                  v-if="enableChat"
-                >
+                <a-tooltip :title="t('CHAT')" placement="bottom" v-if="enableChat">
                   <a @click="goChat()" class="icon-button">
                     <MessageOutlined />
                   </a>
                 </a-tooltip>
-                <a-tooltip
-                  :title="
-                    !testingComplete ? t('PLEASE_WAIT_FOR_TESTING') : t('SHARE')
-                  "
-                  placement="bottom"
-                >
-                  <a
-                    @click="goShare"
-                    class="icon-button"
-                    :class="{ 'disabled-icon': !testingComplete }"
-                  >
+                <a-tooltip :title="!testingComplete ? t('PLEASE_WAIT_FOR_TESTING') : t('SHARE')
+                  " placement="bottom">
+                  <a @click="goShare" class="icon-button" :class="{ 'disabled-icon': !testingComplete }">
                     <ShareAltOutlined />
                   </a>
                 </a-tooltip>
@@ -280,12 +154,12 @@
                       <a-menu-item key="1">
                         <a @click="copyModels('valid')">{{
                           t('COPY_IDENTICAL_MODELS')
-                        }}</a>
+                          }}</a>
                       </a-menu-item>
                       <a-menu-item key="2">
                         <a @click="copyModels('available')">{{
                           t('COPY_AVAILABLE_MODELS')
-                        }}</a>
+                          }}</a>
                       </a-menu-item>
                     </a-menu>
                   </template>
@@ -296,35 +170,20 @@
                   </a-tooltip>
                 </a-dropdown>
               </div>
-              <a-progress
-                :percent="progressPercent"
-                show-info
-                size="small"
-                style="margin-top: 10px"
-              />
+              <a-progress :percent="progressPercent" show-info size="small" style="margin-top: 10px" />
 
               <div v-if="!isMobile" class="table-container">
-                <a-table
-                  :columns="columns"
-                  :data-source="tableData"
-                  :pagination="pagination"
-                  :row-key="record => record.key"
-                  size="small"
-                  class="result-table"
-                  @change="handleTableChange"
-                  @resizeColumn="handleResizeColumn"
-                >
+                <a-table :columns="columns" :data-source="tableData" :pagination="pagination"
+                  :row-key="record => record.key" size="small" class="result-table" @change="handleTableChange"
+                  @resizeColumn="handleResizeColumn">
                   <template #bodyCell="{ text, record, column, index }">
                     <template v-if="column.dataIndex === 'status'">
                       {{ record.status }}
                     </template>
                     <template v-else-if="column.dataIndex === 'model'">
                       <span style="display: flex; align-items: center">
-                        <MessageOutlined
-                          style="margin-right: 8px; cursor: pointer"
-                          @click="goChat(record.model)"
-                          v-if="enableChat"
-                        />
+                        <MessageOutlined style="margin-right: 8px; cursor: pointer" @click="goChat(record.model)"
+                          v-if="enableChat" />
                         {{ record.model }}
                       </span>
                     </template>
@@ -332,25 +191,16 @@
                       {{ record.responseTime }}
                     </template>
                     <template v-else-if="column.dataIndex === 'buttons'">
-                      <template
-                        v-if="record.buttons && record.buttons.length > 0"
-                      >
+                      <template v-if="record.buttons && record.buttons.length > 0">
                         <a-popover trigger="hover" placement="top">
                           <template #content>
                             <div class="verify-btn-group">
-                              <a-button
-                                v-for="(button, idx) in record.buttons"
-                                :key="idx"
-                                type="default"
-                                size="small"
-                                @click="button.onClick"
-                                style="margin: 0 5px 5px 0"
-                                :style="{
+                              <a-button v-for="(button, idx) in record.buttons" :key="idx" type="default" size="small"
+                                @click="button.onClick" style="margin: 0 5px 5px 0" :style="{
                                   backgroundColor:
                                     buttonColors[button.key] || '',
                                   borderColor: buttonColors[button.key] || '',
-                                }"
-                              >
+                                }">
                                 {{ button.label }}
                               </a-button>
                             </div>
@@ -363,10 +213,7 @@
                     </template>
 
                     <template v-else-if="column.dataIndex === 'remark'">
-                      <a-tooltip
-                        :title="record.fullRemark || record.remark"
-                        placement="topLeft"
-                      >
+                      <a-tooltip :title="record.fullRemark || record.remark" placement="topLeft">
                         <span v-html="record.remark"></span>
                       </a-tooltip>
                     </template>
@@ -376,28 +223,20 @@
                   </template>
                 </a-table>
               </div>
-              <div
-                v-if="isMobile"
-                class="list-container"
-                style="margin: 0 16px"
-              >
+              <div v-if="isMobile" class="list-container" style="margin: 0 16px">
                 <div class="result-list">
-                  <div
-                    class="list-item"
-                    v-for="item in paginatedData"
-                    :key="item.key"
-                  >
+                  <div class="list-item" v-for="item in paginatedData" :key="item.key">
                     <div class="list-item-content">
                       <div class="list-item-field">
                         <span class="field-label">{{
                           t('MODEL_STATUS_LABEL')
-                        }}</span>
+                          }}</span>
                         <span class="field-value">{{ item.status }}</span>
                       </div>
                       <div class="list-item-field">
                         <span class="field-label">{{
                           t('MODEL_NAME_LABEL')
-                        }}</span>
+                          }}</span>
                         <span class="field-value" @click="copyText(item.model)">
                           {{ item.model }}
                         </span>
@@ -405,23 +244,16 @@
                       <div class="list-item-field">
                         <span class="field-label">{{
                           t('RESPONSE_TIME_LABEL')
-                        }}</span>
+                          }}</span>
                         <span class="field-value">{{ item.responseTime }}</span>
                       </div>
                       <div class="list-item-field">
                         <div class="verify-btn-group">
-                          <a-button
-                            v-for="(button, index) in item.buttons"
-                            :key="index"
-                            type="default"
-                            size="small"
-                            @click="button.onClick"
-                            style="margin-bottom: 5px"
-                            :style="{
+                          <a-button v-for="(button, index) in item.buttons" :key="index" type="default" size="small"
+                            @click="button.onClick" style="margin-bottom: 5px" :style="{
                               backgroundColor: buttonColors[button.key] || '',
                               borderColor: buttonColors[button.key] || '',
-                            }"
-                          >
+                            }">
                             {{ button.label }}
                           </a-button>
                         </div>
@@ -434,92 +266,46 @@
                   </div>
                 </div>
               </div>
-              <a-pagination
-                :current="currentPage"
-                :total="tableData.length"
-                :pageSize="pageSize"
-                @change="handlePageChange"
-                style="margin-top: 16px; text-align: right"
-                v-if="isMobile"
-              />
+              <a-pagination :current="currentPage" :total="tableData.length" :pageSize="pageSize"
+                @change="handlePageChange" style="margin-top: 16px; text-align: right" v-if="isMobile" />
             </div>
           </div>
         </div>
       </a-flex>
     </div>
-    <a-modal
-      v-model:open="functionCallingModalVisible"
-      :title="t('FUNCTION_VERIFICATION_MODAL_TITLE')"
-      @ok="handleFunctionCallingOk"
-      @cancel="handleFunctionCallingCancel"
-      :destroyOnClose="true"
-    >
-      <a-form
-        :model="{ a: functionCallingA, b: functionCallingB }"
-        layout="horizontal"
-      >
+    <a-modal v-model:open="functionCallingModalVisible" :title="t('FUNCTION_VERIFICATION_MODAL_TITLE')"
+      @ok="handleFunctionCallingOk" @cancel="handleFunctionCallingCancel" :destroyOnClose="true">
+      <a-form :model="{ a: functionCallingA, b: functionCallingB }" layout="horizontal">
         <a-row :gutter="16">
           <a-col :span="12">
-            <a-form-item
-              :label="t('VALUE_A')"
-              :label-col="{ span: 6 }"
-              :wrapper-col="{ span: 18 }"
-            >
-              <a-input-number
-                v-model:value="functionCallingA"
-                style="width: 100%"
-              />
+            <a-form-item :label="t('VALUE_A')" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+              <a-input-number v-model:value="functionCallingA" style="width: 100%" />
             </a-form-item>
           </a-col>
           <a-col :span="12">
-            <a-form-item
-              :label="t('VALUE_B')"
-              :label-col="{ span: 6 }"
-              :wrapper-col="{ span: 18 }"
-            >
-              <a-input-number
-                v-model:value="functionCallingB"
-                style="width: 100%"
-              />
+            <a-form-item :label="t('VALUE_B')" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+              <a-input-number v-model:value="functionCallingB" style="width: 100%" />
             </a-form-item>
           </a-col>
         </a-row>
       </a-form>
     </a-modal>
-    <a-modal
-      v-model:open="showAppSettingsModal"
-      :title="t('SETTINGS_PANEL')"
-      :footer="null"
-      :width="600"
-      @cancel="closeSettingsModal"
-      :centered="true"
-      :destroyOnClose="true"
-    >
+    <a-modal v-model:open="showAppSettingsModal" :title="t('SETTINGS_PANEL')" :footer="null" :width="600"
+      @cancel="closeSettingsModal" :centered="true" :destroyOnClose="true">
       <a-tabs>
-        <a-tab-pane
-          key="1"
-          :tab="t('LOCAL_CACHE')"
-          style="overflow-x: hidden"
-          tabPosition="left"
-        >
+        <a-tab-pane key="1" :tab="t('LOCAL_CACHE')" style="overflow-x: hidden" tabPosition="left">
           <a-form @submit.prevent>
             <a-row :gutter="16">
               <a-col :span="16">
                 <a-form-item :label="t('API_URL')">
-                  <a-input
-                    v-model:value="settingsApiUrl"
-                    :placeholder="t('PLEASE_ENTER_API_URL')"
-                  >
+                  <a-input v-model:value="settingsApiUrl" :placeholder="t('PLEASE_ENTER_API_URL')">
                     <template #prefix>
                       <UserOutlined class="site-form-item-icon" />
                     </template>
                   </a-input>
                 </a-form-item>
                 <a-form-item :label="t('API_KEY')">
-                  <a-input
-                    v-model:value="settingsApiKey"
-                    :placeholder="t('PLEASE_ENTER_API_KEY')"
-                  >
+                  <a-input v-model:value="settingsApiKey" :placeholder="t('PLEASE_ENTER_API_KEY')">
                     <template #prefix>
                       <LockOutlined class="site-form-item-icon" />
                     </template>
@@ -528,17 +314,12 @@
               </a-col>
               <a-col :span="8">
                 <div style="display: flex; height: 100%">
-                  <a-button
-                    type="primary"
-                    @click="saveToLocal"
-                    size="large"
-                    style="
+                  <a-button type="primary" @click="saveToLocal" size="large" style="
                       flex: 1;
                       white-space: normal;
                       word-break: break-word;
                       height: 90%;
-                    "
-                  >
+                    ">
                     {{ t('SAVE_TO_LOCAL_CACHE') }}
                   </a-button>
                 </div>
@@ -546,13 +327,8 @@
             </a-row>
           </a-form>
           <h3>{{ t('HISTORY_RECORDS') }}</h3>
-          <a-list
-            :data-source="localCacheList"
-            bordered
-            style="width: 100%"
-            item-layout="horizontal"
-            :style="localListStyle"
-          >
+          <a-list :data-source="localCacheList" bordered style="width: 100%" item-layout="horizontal"
+            :style="localListStyle">
             <template #renderItem="{ item }">
               <a-list-item>
                 <div>
@@ -572,8 +348,7 @@
             </template>
           </a-list>
           <div style="margin-top: 16px">
-            <a-button @click="exportLocalCache" style="margin-right: 8px"
-              >{{ t('EXPORT') }}
+            <a-button @click="exportLocalCache" style="margin-right: 8px">{{ t('EXPORT') }}
             </a-button>
             <a-button @click="importLocalCache">{{ t('IMPORT') }}</a-button>
           </div>
@@ -584,20 +359,14 @@
               <a-row :gutter="16" align="stretch">
                 <a-col :span="16">
                   <a-form-item :label="t('CLOUD_URL')">
-                    <a-input
-                      v-model:value="cloudUrl"
-                      :placeholder="t('PLEASE_ENTER_CLOUD_URL')"
-                    >
+                    <a-input v-model:value="cloudUrl" :placeholder="t('PLEASE_ENTER_CLOUD_URL')">
                       <template #prefix>
                         <UserOutlined class="site-form-item-icon" />
                       </template>
                     </a-input>
                   </a-form-item>
                   <a-form-item :label="t('PASSWORD')">
-                    <a-input-password
-                      v-model:value="cloudPassword"
-                      :placeholder="t('PLEASE_ENTER_PASSWORD')"
-                    >
+                    <a-input-password v-model:value="cloudPassword" :placeholder="t('PLEASE_ENTER_PASSWORD')">
                       <template #prefix>
                         <LockOutlined class="site-form-item-icon" />
                       </template>
@@ -605,17 +374,12 @@
                   </a-form-item>
                 </a-col>
                 <a-col :span="8">
-                  <a-button
-                    type="primary"
-                    @click="handleCloudLogin"
-                    size="large"
-                    style="
+                  <a-button type="primary" @click="handleCloudLogin" size="large" style="
                       width: 100%;
                       height: 90%;
                       white-space: normal;
                       word-break: break-word;
-                    "
-                  >
+                    ">
                     {{ t('LOGIN') }}
                   </a-button>
                 </a-col>
@@ -623,26 +387,51 @@
             </a-form>
           </div>
           <div v-else>
-            <div
-              style="
+            <div style="
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 margin-bottom: 16px;
-              "
-            >
+              ">
               <span>{{ t('LOGGED_IN_TO_CLOUD', { url: cloudUrl }) }}</span>
               <a-button type="primary" @click="handleCloudLogout">
                 {{ t('LOGOUT') }}
               </a-button>
             </div>
-            <a-list
-              :data-source="cloudDataList"
-              bordered
-              style="width: 100%"
-              item-layout="horizontal"
-              :style="cloudListStyle"
-            >
+            <a-form @submit.prevent>
+              <a-row :gutter="16">
+                <a-col :span="16">
+                  <a-form-item :label="t('API_URL')">
+                    <a-input v-model:value="settingsApiUrl" :placeholder="t('PLEASE_ENTER_API_URL')">
+                      <template #prefix>
+                        <UserOutlined class="site-form-item-icon" />
+                      </template>
+                    </a-input>
+                  </a-form-item>
+                  <a-form-item :label="t('API_KEY')">
+                    <a-input v-model:value="settingsApiKey" :placeholder="t('PLEASE_ENTER_API_KEY')">
+                      <template #prefix>
+                        <LockOutlined class="site-form-item-icon" />
+                      </template>
+                    </a-input>
+                  </a-form-item>
+                </a-col>
+                <a-col :span="8">
+                  <div style="display: flex; height: 100%">
+                    <a-button type="primary" @click="addToCloud" size="large" style="
+                      flex: 1;
+                      white-space: normal;
+                      word-break: break-word;
+                      height: 90%;
+                    ">
+                      {{ t('ADD_TO_CLOUD_CACHE') }}
+                    </a-button>
+                  </div>
+                </a-col>
+              </a-row>
+            </a-form>
+            <a-list :data-source="cloudDataList" bordered style="width: 100%" item-layout="horizontal"
+              :style="cloudListStyle">
               <template #renderItem="{ item }">
                 <a-list-item>
                   <div>
@@ -662,14 +451,11 @@
               </template>
             </a-list>
             <div style="margin-top: 16px">
-              <a-button @click="exportCloudCache" style="margin-right: 8px"
-                >{{ t('EXPORT') }}
+              <a-button @click="exportCloudCache" style="margin-right: 8px">{{ t('EXPORT') }}
               </a-button>
-              <a-button @click="importCloudCache" style="margin-right: 8px"
-                >{{ t('IMPORT') }}
+              <a-button @click="importCloudCache" style="margin-right: 8px">{{ t('IMPORT') }}
               </a-button>
-              <a-button type="primary" @click="confirmSaveCloudData"
-                >{{ t('CONFIRM_SAVE') }}
+              <a-button type="primary" @click="confirmSaveCloudData">{{ t('CONFIRM_SAVE') }}
               </a-button>
             </div>
           </div>
@@ -677,14 +463,7 @@
         <a-tab-pane key="3" :tab="t('ABOUT')">
           <div style="padding: 12px">
             <a-row :gutter="[12, 12]" align="middle">
-              <a-col
-                :xs="4"
-                :sm="4"
-                :md="6"
-                :lg="6"
-                :xl="6"
-                style="text-align: center"
-              >
+              <a-col :xs="4" :sm="4" :md="6" :lg="6" :xl="6" style="text-align: center">
                 <img src="../assets/logo.png" alt="Logo" style="width: 60px" />
               </a-col>
               <a-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12">
@@ -700,25 +479,11 @@
               </a-col>
               <a-col :xs="8" :sm="8" :md="6" :lg="6" :xl="6">
                 <div style="text-align: right">
-                  <a-space
-                    direction="vertical"
-                    size="small"
-                    style="width: 100%"
-                  >
-                    <a-button
-                      type="default"
-                      size="middle"
-                      block
-                      @click="openChangelog"
-                    >
+                  <a-space direction="vertical" size="small" style="width: 100%">
+                    <a-button type="default" size="middle" block @click="openChangelog">
                       {{ t('UPDATE_LOG') }}
                     </a-button>
-                    <a-button
-                      type="primary"
-                      size="middle"
-                      block
-                      @click="openWebsite"
-                    >
+                    <a-button type="primary" size="middle" block @click="openWebsite">
                       {{ t('OFFICIAL_WEBSITE') }}
                     </a-button>
                   </a-space>
@@ -727,11 +492,7 @@
             </a-row>
             <a-divider style="margin: 16px 0"></a-divider>
             <div style="text-align: left">
-              <p
-                v-for="(desc, index) in appDescription"
-                :key="index"
-                style="margin: 8px 0; font-size: 14px"
-              >
+              <p v-for="(desc, index) in appDescription" :key="index" style="margin: 8px 0; font-size: 14px">
                 {{ desc }}
               </p>
             </div>
@@ -744,20 +505,12 @@
                     {{ t('AUTHORS') }}
                   </h3>
                   <p style="margin: 4px 0; font-size: 14px">
-                    <a
-                      :href="appInfo.author.url"
-                      target="_blank"
-                      style="color: #1890ff"
-                    >
+                    <a :href="appInfo.author.url" target="_blank" style="color: #1890ff">
                       {{ appInfo.author.name }}
                     </a>
                   </p>
                   <p>
-                    <a
-                      :href="appInfo.coauthor.url"
-                      target="_blank"
-                      style="color: #1890ff"
-                    >
+                    <a :href="appInfo.coauthor.url" target="_blank" style="color: #1890ff">
                       {{ appInfo.coauthor.name }}
                     </a>
                   </p>
@@ -768,16 +521,8 @@
                     {{ t('SPONSORS') }}
                   </h3>
                   <ul style="list-style-type: none; padding: 0">
-                    <li
-                      v-for="(sponsor, index) in appInfo.sponsors"
-                      :key="index"
-                      style="margin-bottom: 4px"
-                    >
-                      <a
-                        :href="sponsor.url"
-                        target="_blank"
-                        style="color: #1890ff"
-                      >
+                    <li v-for="(sponsor, index) in appInfo.sponsors" :key="index" style="margin-bottom: 4px">
+                      <a :href="sponsor.url" target="_blank" style="color: #1890ff">
                         {{ sponsor.name }}
                       </a>
                       :{{ sponsor.desc }}
@@ -791,25 +536,13 @@
                   {{ t('CONTRIBUTORS') }}
                 </h3>
                 <div style="display: flex; flex-wrap: wrap">
-                  <div
-                    v-for="(contributor, index) in appInfo.contributors"
-                    :key="index"
-                    style="margin: 8px; text-align: center"
-                  >
+                  <div v-for="(contributor, index) in appInfo.contributors" :key="index"
+                    style="margin: 8px; text-align: center">
                     <a :href="contributor.url" target="_blank">
-                      <a-avatar
-                        :src="contributor.avatar"
-                        :alt="contributor.name"
-                        shape="circle"
-                        :size="45"
-                      ></a-avatar>
+                      <a-avatar :src="contributor.avatar" :alt="contributor.name" shape="circle" :size="45"></a-avatar>
                     </a>
                     <p style="margin-top: 4px; font-size: 14px">
-                      <a
-                        :href="contributor.url"
-                        target="_blank"
-                        style="color: #1890ff"
-                      >
+                      <a :href="contributor.url" target="_blank" style="color: #1890ff">
                         {{ contributor.name }}
                       </a>
                     </p>
@@ -830,35 +563,17 @@
       </a-tabs>
     </a-modal>
 
-    <a-modal
-      v-model:open="showModelModal"
-      :title="t('SELECT_MODEL_TITLE')"
-      :width="600"
-      @ok="handleModelModalOk"
-      @cancel="handleModelModalCancel"
-      :confirm-loading="spinning"
-      :ok-text="t('OK')"
-      :cancel-text="t('CANCEL')"
-      :closable="true"
-    >
+    <a-modal v-model:open="showModelModal" :title="t('SELECT_MODEL_TITLE')" :width="600" @ok="handleModelModalOk"
+      @cancel="handleModelModalCancel" :confirm-loading="spinning" :ok-text="t('OK')" :cancel-text="t('CANCEL')"
+      :closable="true">
       <div>
         <div style="margin-bottom: 16px">
           {{ t('SELECTED_MODELS', { count: selectedModels.length }) }}
         </div>
-        <div
-          class="model-filter-container"
-          style="display: flex; align-items: center; margin-bottom: 16px"
-        >
-          <a-input
-            v-model:value="prefixFilter"
-            :placeholder="t('FILTER_PLACEHOLDER')"
-            style="width: 200px; margin-right: 8px"
-          />
-          <a-button
-            type="primary"
-            @click="filterModels"
-            style="margin-right: 8px"
-          >
+        <div class="model-filter-container" style="display: flex; align-items: center; margin-bottom: 16px">
+          <a-input v-model:value="prefixFilter" :placeholder="t('FILTER_PLACEHOLDER')"
+            style="width: 200px; margin-right: 8px" />
+          <a-button type="primary" @click="filterModels" style="margin-right: 8px">
             {{ t('FILTER') }}
           </a-button>
           <a-button @click="clearFilter">{{ t('CLEAR') }}</a-button>
@@ -875,8 +590,7 @@
           <a-checkbox-group v-model:value="selectedModels">
             <a-row :gutter="[16, 16]">
               <a-col v-for="model in sortedModels" :key="model" :span="12">
-                <a-checkbox :value="model" style="width: 100%"
-                  >{{ model }}
+                <a-checkbox :value="model" style="width: 100%">{{ model }}
                 </a-checkbox>
               </a-col>
             </a-row>
@@ -886,46 +600,25 @@
     </a-modal>
 
     <!--  测试总结   -->
-    <a-modal
-      v-model:open="isSummaryModalVisible"
-      :title="t('TEST_RESULT_SUMMARY')"
-      width="600px"
-      centered
-      @ok="handleSummaryOk"
-    >
+    <a-modal v-model:open="isSummaryModalVisible" :title="t('TEST_RESULT_SUMMARY')" width="600px" centered
+      @ok="handleSummaryOk">
       <div v-html="summaryContent"></div>
-      <div
-        ref="chartContainer"
-        style="width: 80%; height: 250px; margin: 30px auto 30px"
-      ></div>
+      <div ref="chartContainer" style="width: 80%; height: 250px; margin: 30px auto 30px"></div>
     </a-modal>
     <!-- 保持模板中其他相关部分不变 -->
-    <a-modal
-      v-model:open="showSVGModal"
-      :title="t('SHARE_RESULTS')"
-      :footer="null"
-      @cancel="handleCloseSVGModal"
-    >
+    <a-modal v-model:open="showSVGModal" :title="t('SHARE_RESULTS')" :footer="null" @cancel="handleCloseSVGModal">
       <div class="svg-container">
         <a-image :width="200" :src="svgDataUrl" alt="SVG Image" />
       </div>
       <div class="copy-close-container">
-        <a-button type="primary" @click="copyToClipboardHandler"
-          >{{ t('COPY_IMAGE') }}
+        <a-button type="primary" @click="copyToClipboardHandler">{{ t('COPY_IMAGE') }}
         </a-button>
         <a-button @click="handleCloseSVGModal">{{ t('CLOSE') }}</a-button>
       </div>
     </a-modal>
 
-    <a-modal
-      v-model:open="customDialogModalVisible"
-      :title="t('CUSTOM_DIALOG_VERIFICATION')"
-      @cancel="handleCustomDialogCancel"
-      :width="600"
-      centered
-      :confirmLoading="customDialogLoading"
-      :footer="null"
-    >
+    <a-modal v-model:open="customDialogModalVisible" :title="t('CUSTOM_DIALOG_VERIFICATION')"
+      @cancel="handleCustomDialogCancel" :width="600" centered :confirmLoading="customDialogLoading" :footer="null">
       <div v-if="!customDialogResult">
         <div style="margin-bottom: 16px">
           <p>{{ t('FUNCTION_INTRODUCTION') }}</p>
@@ -933,12 +626,8 @@
         <a-form :label-col="{ span: 4 }" :wrapper-col="{ span: 20 }">
           <!-- 模型下拉框 -->
           <a-form-item :label="t('SELECT_MODEL')">
-            <a-select
-              v-model:value="currentVerifyingModel"
-              :options="modelOptions"
-              :placeholder="t('SELECT_MODEL_PLACEHOLDER')"
-              allowClear
-            >
+            <a-select v-model:value="currentVerifyingModel" :options="modelOptions"
+              :placeholder="t('SELECT_MODEL_PLACEHOLDER')" allowClear>
               <template #suffixIcon>
                 <SmileOutlined />
               </template>
@@ -947,12 +636,8 @@
 
           <!-- 提示词下拉框 -->
           <a-form-item :label="t('SELECT_PROMPT')">
-            <a-select
-              v-model="selectedPresetPrompt"
-              :options="promptOptions"
-              :placeholder="t('SELECT_PROMPT_PLACEHOLDER')"
-              @change="changePrompt"
-            >
+            <a-select v-model="selectedPresetPrompt" :options="promptOptions"
+              :placeholder="t('SELECT_PROMPT_PLACEHOLDER')" @change="changePrompt">
               <template #suffixIcon>
                 <SmileOutlined />
               </template>
@@ -961,21 +646,13 @@
 
           <!-- 提示词输入框 -->
           <a-form-item :label="t('PROMPT_CONTENT')">
-            <a-textarea
-              v-model:value="customDialogPrompt"
-              :placeholder="t('ENTER_PROMPT')"
-              :rows="4"
-            />
+            <a-textarea v-model:value="customDialogPrompt" :placeholder="t('ENTER_PROMPT')" :rows="4" />
           </a-form-item>
 
           <a-form-item :wrapper-col="{ span: 24 }">
             <div style="text-align: right">
-              <a-button
-                type="primary"
-                @click="handleCustomDialogSubmit"
-                :loading="customDialogLoading"
-                style="width: 100px"
-              >
+              <a-button type="primary" @click="handleCustomDialogSubmit" :loading="customDialogLoading"
+                style="width: 100px">
                 {{ t('SEND') }}
               </a-button>
             </div>
@@ -993,10 +670,7 @@
 
           <div class="result-item">
             <div class="label">{{ t('PROMPT') }}:</div>
-            <div
-              class="content no-box"
-              style="display: flex; align-items: center"
-            >
+            <div class="content no-box" style="display: flex; align-items: center">
               <span style="flex: 1; margin-right: 8px">
                 {{ customDialogResult.prompt }}
               </span>
@@ -1016,10 +690,7 @@
           <!-- 响应内容展示 -->
           <div class="result-item">
             <div class="label">{{ t('RESPONSE_CONTENT') }}:</div>
-            <div
-              class="content response-content"
-              style="max-height: 300px; overflow-y: auto"
-            >
+            <div class="content response-content" style="max-height: 300px; overflow-y: auto">
               {{ customDialogResult.response }}
             </div>
           </div>
@@ -2679,6 +2350,45 @@ function importCloudCache() {
   input.click();
 }
 
+// 添加记录到云端缓存
+function addToCloud() {
+  if (!isCloudLoggedIn.value) {
+    message.error(t('PLEASE_LOGIN_TO_CLOUD'));
+    return;
+  }
+
+  // 获取云端缓存列表
+  const existingList = cloudDataList.value || [];
+
+  // 查找是否有相同的 url 和 apiKey
+  const existingIndex = existingList.findIndex(
+    existingItem =>
+      normalizeUrl(existingItem.url) === normalizeUrl(apiUrl.value) &&
+      existingItem.apiKey.trim() === apiKey.value.trim()
+  );
+  if (existingIndex !== -1) {
+    message.error(t('RECORD_ALREADY_EXISTS'));
+    return;
+  }
+
+    // 加入时间戳
+  const id = Math.floor(Math.random() * 100);
+  // 创建新的缓存项
+  const newCacheItem = {
+    id: Date.now() + id,
+    url: apiUrl.value,
+    apiKey: apiKey.value,
+    name: `配置 ${existingList.length + 1}`,
+  };
+
+  // 添加新的缓存项到列表
+  existingList.push(newCacheItem);
+
+  // 更新云端缓存列表
+  cloudDataList.value = existingList;
+  message.success(t('CLOUD_ITEM_ADDED'));
+}
+
 // 页面加载时尝试读取本地缓存
 onMounted(() => {
   // 尝试读取本地缓存列表
@@ -2955,9 +2665,12 @@ async function handlePaste() {
 }
 
 .icon-button.disabled-icon {
-  pointer-events: none; /* 禁用点击 */
-  opacity: 0.5; /* 调整透明度，表示禁用状态 */
-  cursor: not-allowed; /* 光标为禁用状态 */
+  pointer-events: none;
+  /* 禁用点击 */
+  opacity: 0.5;
+  /* 调整透明度，表示禁用状态 */
+  cursor: not-allowed;
+  /* 光标为禁用状态 */
 }
 
 .icon-button:hover:not(.disabled-icon) {
@@ -2997,22 +2710,28 @@ body {
 .page-content {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 垂直居中 */
-  align-items: center; /* 水平居中 */
+  justify-content: center;
+  /* 垂直居中 */
+  align-items: center;
+  /* 水平居中 */
 }
 
 .container {
   width: 100%;
-  max-width: 600px; /* 根据需要设置最大宽度 */
+  max-width: 600px;
+  /* 根据需要设置最大宽度 */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: var(--background-color); /* 使用主题变量 */
+  background-color: var(--background-color);
+  /* 使用主题变量 */
   color: var(--font-color);
-  border-radius: 10px; /* 圆角 */
+  border-radius: 10px;
+  /* 圆角 */
   border-top: 4px solid var(--border-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影，使容器更突出 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* 添加阴影，使容器更突出 */
   align-items: center;
   transition: transform 0.3s ease-in-out;
   margin: auto;
@@ -3030,7 +2749,8 @@ body {
 }
 
 .close-button:hover {
-  color: #ff0000; /* 悬停时的颜色变化 */
+  color: #ff0000;
+  /* 悬停时的颜色变化 */
 }
 
 .container.result-container {
@@ -3047,7 +2767,8 @@ body {
 }
 
 .container.shift-left {
-  transform: translateX(-5%); /* 向左移动 5% */
+  transform: translateX(-5%);
+  /* 向左移动 5% */
 }
 
 .header {
@@ -3056,11 +2777,13 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  min-width: 0; /* 防止子元素溢出 */
+  min-width: 0;
+  /* 防止子元素溢出 */
 }
 
-.header > * {
-  min-width: 0; /* 允许子元素缩小 */
+.header>* {
+  min-width: 0;
+  /* 允许子元素缩小 */
 }
 
 /* 主题切换按钮 */
@@ -3308,7 +3031,8 @@ textarea {
 body.dark-mode {
   background-color: #1e1e1e;
   color: #e0e0e0;
-  --background-color: #2e2e2e; /* 修改为不透明的深灰色 */
+  --background-color: #2e2e2e;
+  /* 修改为不透明的深灰色 */
   --font-color: #e0e0e0;
   --input-background-color: #3c3c3c;
   --input-border-color: #555555;
@@ -3317,7 +3041,8 @@ body.dark-mode {
 body.light-mode {
   background-color: #ffffff;
   color: #000000;
-  --background-color: #f8f8f8; /* 修改为深灰色 */
+  --background-color: #f8f8f8;
+  /* 修改为深灰色 */
   --font-color: #000000;
   --input-background-color: #ffffff;
   --input-border-color: #cccccc;
@@ -3369,7 +3094,7 @@ input[type='button']:active {
 
 /* 确保复选框在正确的模式下的可读性 */
 
-.ant-checkbox + span {
+.ant-checkbox+span {
   color: var(--font-color) !important;
 }
 
@@ -3392,6 +3117,7 @@ textarea::placeholder {
 }
 
 @media (pointer: coarse) {
+
   /* 针对触摸设备的优化 */
   .submit-container input[type='button'] {
     padding: 12px;
@@ -3464,7 +3190,8 @@ input[type='number']:not(:placeholder-shown) {
   .container.result-container {
     max-width: 600px;
     flex: 0 1 auto;
-    min-height: 0; /* 允许容器根据内容收缩 */
+    min-height: 0;
+    /* 允许容器根据内容收缩 */
     margin: 0 10px;
     display: flex;
     flex-direction: column;
@@ -3488,7 +3215,8 @@ input[type='number']:not(:placeholder-shown) {
   }
 
   .container.shift-left {
-    transform: translateX(0%); /* 将左移距离调整为20% */
+    transform: translateX(0%);
+    /* 将左移距离调整为20% */
   }
 
   .container:not(:last-child) {
@@ -3520,7 +3248,8 @@ input[type='number']:not(:placeholder-shown) {
 
   .result-container {
     width: 100%;
-    overflow: hidden; /* 防止内容溢出 */
+    overflow: hidden;
+    /* 防止内容溢出 */
     max-width: 95%;
     margin-bottom: 20px;
   }
@@ -3540,15 +3269,18 @@ input[type='number']:not(:placeholder-shown) {
 .result-table .ant-table-cell {
   padding: 8px;
   table-layout: fixed;
-  white-space: normal; /* 允许内容换行 */
-  word-break: break-all; /* 长单词会换行 */
+  white-space: normal;
+  /* 允许内容换行 */
+  word-break: break-all;
+  /* 长单词会换行 */
 }
 
 .result-table .ant-table {
-  margin: 0; /* 去除外边距 */
+  margin: 0;
+  /* 去除外边距 */
 }
 
-.result-table .ant-table-thead > tr > th {
+.result-table .ant-table-thead>tr>th {
   padding: 8px;
 }
 
@@ -3562,32 +3294,36 @@ h1 {
   display: inline-block;
   font-weight: bold;
   color: #007bff;
-  overflow: hidden; /* 确保伪元素不超出文字区域 */
+  overflow: hidden;
+  /* 确保伪元素不超出文字区域 */
 }
 
 h1::after {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%; /* 初始位置在左侧不可见区域 */
+  left: -100%;
+  /* 初始位置在左侧不可见区域 */
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(255, 255, 255, 0.5) 50%,
-    transparent 100%
-  ); /* 定义闪光的渐变效果 */
-  transform: skewX(-30deg); /* 倾斜闪光，以增加动感 */
+  background: linear-gradient(to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%);
+  /* 定义闪光的渐变效果 */
+  transform: skewX(-30deg);
+  /* 倾斜闪光，以增加动感 */
 }
 
 h1:hover::after {
-  animation: shine 0.75s forwards; /* 悬停时触发动画 */
+  animation: shine 0.75s forwards;
+  /* 悬停时触发动画 */
 }
 
 @keyframes shine {
   to {
-    left: 100%; /* 最终位置在右侧不可见区域 */
+    left: 100%;
+    /* 最终位置在右侧不可见区域 */
   }
 }
 
@@ -3629,12 +3365,12 @@ body.light-mode {
   color: var(--font-color);
 }
 
-.result-table .ant-table-thead > tr > th {
+.result-table .ant-table-thead>tr>th {
   background-color: var(--bg-color);
   color: var(--font-color);
 }
 
-.result-table .ant-table-tbody > tr > td {
+.result-table .ant-table-tbody>tr>td {
   background-color: var(--bg-color);
   color: var(--font-color);
 }
@@ -3651,7 +3387,7 @@ body.light-mode {
     border-bottom: 1px solid var(--border-color);
   }
 
-  .result-table .ant-table-row > td {
+  .result-table .ant-table-row>td {
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
@@ -3685,14 +3421,16 @@ body.light-mode {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center; /* 使按钮在水平方向居中 */
+    justify-content: center;
+    /* 使按钮在水平方向居中 */
     gap: 5px;
   }
 
   input[type='text'],
   textarea,
   input[type='number'] {
-    font-size: 16px; /* 在移动设备上将字体大小设置为 16px */
+    font-size: 16px;
+    /* 在移动设备上将字体大小设置为 16px */
   }
 }
 
@@ -3710,9 +3448,12 @@ body.light-mode {
   border-bottom: 1px solid var(--border-color, #e0e0e0);
   padding: 8px 0;
   display: flex;
-  flex-direction: row; /* 确保子元素水平排列 */
-  align-items: flex-start; /* 垂直方向顶部对齐 */
-  text-align: left; /* 确保文本左对齐 */
+  flex-direction: row;
+  /* 确保子元素水平排列 */
+  align-items: flex-start;
+  /* 垂直方向顶部对齐 */
+  text-align: left;
+  /* 确保文本左对齐 */
 }
 
 .field-label {
@@ -3731,13 +3472,15 @@ body.light-mode {
 /* 调整按钮在移动端的显示 */
 
 .list-item {
-  border: 1px solid var(--border-color, #e0e0e0); /* 使用CSS变量，提供默认值 */
+  border: 1px solid var(--border-color, #e0e0e0);
+  /* 使用CSS变量，提供默认值 */
   padding: 12px;
   margin-bottom: 16px;
   border-radius: 8px;
   background-color: var(--background-color, #fff);
   display: flex;
-  flex-direction: column; /* 确保子元素垂直排列 */
+  flex-direction: column;
+  /* 确保子元素垂直排列 */
   flex-grow: 1;
 }
 
@@ -3806,7 +3549,8 @@ body.light-mode {
 }
 
 .table-container {
-  flex: 0 1 auto; /* 防止表格容器过度拉伸 */
+  flex: 0 1 auto;
+  /* 防止表格容器过度拉伸 */
   display: flex;
   flex-direction: column;
 }
@@ -3822,7 +3566,8 @@ body.light-mode {
 
 .result-table .ant-table-body {
   flex: 0 1 auto;
-  overflow-y: auto; /* 当内容超出时，出现滚动条 */
+  overflow-y: auto;
+  /* 当内容超出时，出现滚动条 */
 }
 
 .result-table {
@@ -3845,7 +3590,8 @@ body.light-mode {
 
 .result-table .ant-table-body {
   flex: 1;
-  overflow-y: auto; /* 表格主体部分滚动 */
+  overflow-y: auto;
+  /* 表格主体部分滚动 */
 }
 
 .svg-container {
@@ -3857,19 +3603,23 @@ body.light-mode {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px; /* 根据需要调整顶部间距 */
+  margin-top: 20px;
+  /* 根据需要调整顶部间距 */
 }
 
 .copy-close-container .ant-btn {
-  flex: 0 0 auto; /* 防止按钮过度拉伸 */
+  flex: 0 0 auto;
+  /* 防止按钮过度拉伸 */
 }
 
 .copy-close-container .ant-btn:first-child {
-  margin-right: auto; /* 将第一个按钮（复制按钮）推到最左侧 */
+  margin-right: auto;
+  /* 将第一个按钮（复制按钮）推到最左侧 */
 }
 
 .copy-close-container .ant-btn:last-child {
-  margin-left: auto; /* 将最后一个按钮（关闭按钮）推到最右侧 */
+  margin-left: auto;
+  /* 将最后一个按钮（关闭按钮）推到最右侧 */
 }
 
 /* 折叠面板标题样式 */
@@ -3894,7 +3644,7 @@ body.light-mode {
   border-bottom: 1px solid #e8e8e8;
 }
 
-.announcement-collapse .ant-collapse-content > .ant-collapse-content-box {
+.announcement-collapse .ant-collapse-content>.ant-collapse-content-box {
   padding: 0 8px;
 }
 
@@ -3909,7 +3659,8 @@ body.light-mode {
 }
 
 .ant-list-item {
-  min-height: 80px; /* 根据需要调整 */
+  min-height: 80px;
+  /* 根据需要调整 */
 }
 
 .ant-list {
@@ -3992,9 +3743,13 @@ body.light-mode {
 }
 
 .popover-description-pre {
-  margin: 0; /* 去除默认的 margin */
-  white-space: pre-wrap; /* 保留换行符，自动换行 */
-  word-break: break-word; /* 单词过长时换行 */
-  font-size: 14px; /* 根据需要调整字体大小 */
+  margin: 0;
+  /* 去除默认的 margin */
+  white-space: pre-wrap;
+  /* 保留换行符，自动换行 */
+  word-break: break-word;
+  /* 单词过长时换行 */
+  font-size: 14px;
+  /* 根据需要调整字体大小 */
 }
 </style>
