@@ -97,6 +97,7 @@
   "PLEASE_ENTER_API_KEY": "Please enter the API Key",
   "SAVE_TO_LOCAL_CACHE": "Save to Local Cache",
   "ADD_TO_LOCAL_CACHE": "Save to Local Cache",
+  "ADD_TO_CLOUD_CACHE": "Add to Cloud Cache",
   "CLOUD_URL": "CloudURL",
   "PLEASE_ENTER_CLOUD_URL": "Please enter the Cloud URL",
   "LOAD_FROM_CLOUD": "Load from Cloud",
